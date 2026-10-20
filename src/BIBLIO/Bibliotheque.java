@@ -74,6 +74,33 @@ public class Bibliotheque {
 	        System.out.println("Erreur lors de la sauvegarde : " + e.getMessage());
 	    }
 	}
+   public void charger(String fichier) {
+	   try(BufferedReader reader = 
+			   new BufferedReader(new FileReader(fichier) ) ){
+		   String ligne;
+		   
+		   while( (ligne =reader.readLine()) != null) {
+			   Livre livre = new Livre();
+			   livre.setTitre(ligne);
+			   livres.add(livre);
+		   }
+	   }
+	   catch(IOException e){
+		   System.out.println("Eurreur de chargement :" + e.getMessage());
+	   }
+   }
+   public void afficherLivres() {
+	    for (Livre livre : livres) {
+	        System.out.println(livre);
+	    }
+	}
+   @Override
+   public String toString() {
+	return "Bibliotheque [nom=" + nom + ", adresse=" + adresse + ", livres=" + livres + ", utilisateurs=" + utilisateurs
+			+ ", emprunts=" + emprunts + "]";
+   }
+   
+   
    
    
 	
