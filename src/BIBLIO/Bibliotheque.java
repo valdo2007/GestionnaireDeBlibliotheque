@@ -46,7 +46,7 @@ public class Bibliotheque {
    }
    public void retirerLivre(int id) {
 	   for (Livre livre : livres) {
-		   if(livre.getid() == id){
+		   if(livre.getId() == id){
 			   livres.remove(livre);
 			   
 		   }
