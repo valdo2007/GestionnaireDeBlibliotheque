@@ -113,7 +113,7 @@ public  int getNbExemplairesDisponibles() {
 	 if(estDisponible()) {
 		 nbExemplairesDisponibles--;
 		 nbEmprunts++;
-		
+		 disponible = nbExemplairesDisponibles > 0;
 		 System.out.println("Le livre: " +getTitre()
 		                        +"avec isbn : " +getIsbn()+ " a été empreinter par "
 		                        + utilisateur.getNom());

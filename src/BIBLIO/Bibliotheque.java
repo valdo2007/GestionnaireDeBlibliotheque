@@ -1,6 +1,7 @@
 package BIBLIO;
 
 import java.util.*;
+
 import java.io.*;
 
 public class Bibliotheque {
@@ -45,13 +46,8 @@ public class Bibliotheque {
 	   livres.add(livre);
    }
    public void retirerLivre(int id) {
-	   for (Livre livre : livres) {
-		   if(livre.getId() == id){
-			   livres.remove(livre);
-			   
-		   }
-	   }
-   }
+		   livres.removeIf(livre -> livre.getId() == id);
+}
    public void inscrireUtilisateur(Utilisateur utilisateur) {
 	   utilisateurs.add(utilisateur);
    }

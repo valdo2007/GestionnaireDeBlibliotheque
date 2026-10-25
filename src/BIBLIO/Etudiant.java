@@ -1,5 +1,5 @@
 package BIBLIO;
-public abstract  class Etudiant extends Utilisateur {
+public  class Etudiant extends Utilisateur {
     private String numeroEtudiant;
     private String filiere;
     private final int nbEmprunts = 3;
@@ -38,7 +38,9 @@ public abstract  class Etudiant extends Utilisateur {
 	           
 	}
 	@Override
-	public abstract double calculerPenalite();
+	public  double calculerPenalite() {
+		return 0.50;
+	};
 
 	@Override
 	public String toString() {

@@ -1,5 +1,5 @@
 package BIBLIO;
-public abstract  class Professeur extends Utilisateur {
+public  class Professeur extends Utilisateur {
     private String grade;
     private final int nbEmprunts = 5;
 	private String departement;
@@ -36,7 +36,9 @@ public abstract  class Professeur extends Utilisateur {
 	           
 	}
 	@Override
-	public abstract double calculerPenalite();
+	public double calculerPenalite() {
+		return 0.25;
+	};
 	@Override
 	public String toString() {
 		return "Professeur [grade=" + grade + ", nbEmprunts=" + nbEmprunts + ", departement=" + departement + "]";
