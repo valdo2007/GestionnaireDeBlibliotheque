@@ -60,6 +60,7 @@ public abstract class Utilisateur {
 	        nbEmpruntsActuals--;
 	    }
 	}
+	public abstract double calculerPenalite();
 	public String getInfos() {
 	    return "ID : " + id
 	            + ", Nom : " + nom
@@ -67,7 +68,6 @@ public abstract class Utilisateur {
 	            + ", Email : " + email
 	            + ", Nombre d'emprunts actuels : " + nbEmpruntsActuals;
 	}
-	public abstract void calculerPenalite();
 	@Override
 	public String toString() {
 		return "Utilisateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email
